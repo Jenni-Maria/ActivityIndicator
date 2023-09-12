@@ -22,12 +22,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    marginTop: 200, //tämä pois, kun "row" käytössä
   },
-  horizontal:{
-    //flexDirection: 'row',
-    flexDirection: 'column',
+ horizontal:{
+    flexDirection: 'row',
     justifyContent: 'space around',
-    padding: 30,
+    padding: 50,
   }
 });
