@@ -1,11 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { StyleSheet, ActivityIndicator, View } from 'react-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={[styles.container, styles.horizontal]}>
+      <ActivityIndicator size = 'small' color = 'red'/>
+      <ActivityIndicator size = 'large' color = 'blue' />
+      <ActivityIndicator size = 'extra-large' color = 'green' />
+      <ActivityIndicator size = 'small' color ='purple' />
+      <ActivityIndicator size = 'large' color = '#0000ff'/>
+      <ActivityIndicator size = 'extra-large' color = 'purple'/>
+      <ActivityIndicator size = 'small' color = 'green'/>
+      <ActivityIndicator size = 'large' />
+      <ActivityIndicator size = 'extra-large' color = 'purple'/>
     </View>
   );
 }
@@ -13,8 +21,13 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
+    marginTop: 200, //tämä pois, kun "row" käytössä
   },
+  horizontal:{
+    //flexDirection: 'row',
+    flexDirection: 'column',
+    justifyContent: 'space around',
+    padding: 30,
+  }
 });
